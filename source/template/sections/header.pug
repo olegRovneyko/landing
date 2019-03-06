@@ -1,0 +1,23 @@
+header.header
+	.header__top
+		.container
+			.contacts
+				a.contact(href="tel:+380955476823")
+					i.fa.fa-mobile(aria-hidden="true")
+					span.contact__text 095 547 68 23
+				a.contact(href="mailto:info@buisiness.co")
+					i.fa.fa-envelope.contact__icon.contact__icon--email(aria-hidden="true")
+					span.contact__text info@buisiness.co
+				a.facebook-icon(href="facebook.com")
+					i.fa.fa-facebook(aria-hidden="true")
+	.container
+		.header__bottom
+			.logo: img.logo__picture(src="images/logo.png" alt="picture")
+			nav.nav
+			- var items = ['Home', 'About As', 'Our Approch', 'Our Work']
+				each item in items
+					if item === 'Home'
+						a.nav__link.nav__link--active(href="#")=item
+					else
+						a.nav__link(href="#")=item
+			a.button.header__button.button--red(href="#") Free Consultant
